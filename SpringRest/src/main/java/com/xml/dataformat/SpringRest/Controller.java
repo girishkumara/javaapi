@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RestController
 public class Controller {
 	
-	@RequestMapping(value="/",method=RequestMethod.GET)
+	@RequestMapping(value="/Rest/hello",method=RequestMethod.GET)
 	public String helloworld()
 	{
 		return "hello world";

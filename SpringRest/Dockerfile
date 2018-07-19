@@ -1,3 +1,4 @@
-FROM tomcat:8.0.20-jre8
-VOLUME /tmp
-COPY target/springrest-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/app.war
+FROM openjdk:8
+ADD target/docker-spring.jar docker-spring.jar
+EXPOSE 8085
+ENTRYPOINT ["java","-jar","docker-spring.jar"]
